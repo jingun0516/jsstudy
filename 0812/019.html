@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>논리 연산자</title>
+</head>
+<body>
+<script>
+  // 중요합니다!
+  let x = true; // 참, 1, 전기가 통하고
+  let y = false; // 거짓, 0, 전기가 통하지 않고
+  // && // and 연산자, 곱
+  // || // or 연산자, 합
+  // ! // not 연산자, 부정
+
+  console.log(x && y); // 모두 true여야만 true
+  console.log(x || y); // 둘 중 하나만 true여도 true
+
+  // 어떤 조건에 true가 나오는가가 중요합니다.
+  for (let i = 0; i < 100; i++) { // 0 ~ 99
+    if (i % 3 == 0 && i % 5 == 0) { // true여야 아래 코드를 실행시킵니다.
+      console.log(i); // 공배수 또는 15의 배수
+    }
+  }
+
+  // 어떤 조건에 true가 나오는가가 중요합니다.
+  for (let i = 0; i < 100; i++) { // 0 ~ 99
+    if (i % 3 == 0 || i % 5 == 0) { // true여야 아래 코드를 실행시킵니다.
+      console.log(i); // 3이나 5의 배수
+    }
+  }
+
+  console.log(!true); // false
+  console.log(!false); // true
+
+  // 실무에서 자주 사용합니다.
+  ''    // =====> false!!!
+  !!''; // false
+  !!' '; // true
+  !!0; // false
+  !!1; // true
+
+  // 실무에서 자주 사용되진 않고...
+  // 사용을 권장하진 않습니다.
+  ~~31.5; // 31
+</script>
+</body>
+</html>

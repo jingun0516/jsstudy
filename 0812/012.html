@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문자열 자료형</title>
+</head>
+<body>
+<script>
+    // 문자열 자료형
+    let string1 = 'Hello';
+    let string2 = "World";
+
+    console.log(string1); // Hello
+    console.log(string2); // World
+
+    // 특징 1. 순서
+    let string3 = 'Hello World';
+    // 여기서 0을 index
+    // 호출하는 것 indexing
+    console.log(string3[0]);    // H
+    console.log(string3[1]);    // e
+
+    // 특징 2. 문자열 중 하나의 값 변경 X   (immutable)
+    // C++ 에서는 가능했지만 JS에서는 불가능
+    let string4 = 'Hello';
+    string4[0] = 'h';
+    console.log(string4);       // Hello
+
+    // 특징 3. 다양한 메소드, 속성
+    // 속성: return 값이 존재
+    console.log(string4.length);    // 5
+    // 메소드: return 보다는 직접 기능을 함( ()있는것들 )
+    console.log(string4.toUpperCase());
+
+    // 특징 4. 문자열을 합칠 수 있음
+    let string5 = 'Hello';
+    let string6 = 'World';
+    console.log(string5 + string6); // HelloWorld;
+</script>
+</body>
+</html>

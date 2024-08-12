@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>변수의 타입</title>
+</head>
+<body>
+<script>
+  let a = 10;
+  let b = '10';
+
+  console.log(a + a); // 20
+  console.log(b + b); // 1010
+
+  // 왜 이렇게 나왔을까?
+  // a는 숫자고 b문자니까요?
+  // a도 컴퓨터 입장에서는 숫자고
+  // b도 컴퓨터 입장에서는 숫자입니다.
+
+  // type이 있기 때문에
+  // a는 이어붙이지 않고 더하고
+  // b는 더하지 않고 이어붙인 것입니다.
+
+  let age = 10;
+  console.log(typeof age); // "number"(정수와 실수를 모두 포함)
+
+  let name = 'Jun';
+  console.log(typeof name); // "string" (문자열입니다.)
+
+  // typeof로 모든 변수의 타입을 알 수 있지 않습니다.(??)
+  // 나중에 type을 정확하게 찍을 수 있는 함수를 다시 살펴보게 됩니다.
+  // 지금 기억하지 마세요!
+  function typeCheck(value) {
+    const return_value = Object.prototype.toString.call(value);
+    const type = return_value.substring(
+            return_value.indexOf(" ") + 1,
+            return_value.indexOf("]")
+    );
+    return type.toLowerCase();
+  }
+
+  typeof(value) === 'number'
+  typeCheck(value) === 'number'
+  isNaN(value) // value '', ' ', '1', '2', '3'이 false이고 'a', 'b', 'c' true입니다.
+  arr.constructor === Array
+  arr instanceof Array
+</script>
+</body>
+</html>

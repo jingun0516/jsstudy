@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>문자열 메서드</title>
+</head>
+<body>
+<script>
+    // 문자열 메서드
+
+    // 1. indexOf: 특정 문자열의 위치 반환 (첫번째)
+    let s1 = "hello world world world";
+    console.log(s1.indexOf('world'));       // 6 처음 발견한 인덱스 반환
+    console.log(s1.indexOf('ceo'));         // -1
+
+    // 2. replace: 특정 문자열 대체 (첫번째)
+    let s2 = 'weniv CEO licat';
+    console.log(s2.replace('licat', 'mura'));
+
+    // 3. 정규표현식 예제
+    let s3 = "hel1lo wo2rl3d";
+    console.log(s3.replace(/[1-9]/g, ''));      // 1-9를 공백으로 대체
+
+    console.log(s1.replace(/world/g, ''));      // world를 다 공백으로 대체
+
+    // 메서드 체이닝(replace)
+    let s4 = 'weniv CEO licat';
+    console.log(s4.replace('licat', 'mura').replace('CEO', 'CTO'));
+
+    // 4. slice: 문자열 자르기
+    let s5 = "hello world";
+    console.log(s5.slice(0, 3));        // 0~2 까지 => 3 포함 X
+    console.log(s5.slice(2));
+
+    // 마이너스 슬라이싱은 음수 값이 양수로 변환되어 작동됩니다.
+    let s6 = "licat.png";
+    console.log(s6.slice(0, -4));
+    console.log(s6.slice(-4));          // 뒤에서 4칸
+
+    // 다음 자료형에서 'jpeg'를 뽑아는 코드를 작성해주세요.
+    let s7 = 'image.jpeg';
+    let s8 = 'imagehello.jpeg';
+    console.log(s7.slice(-4));
+    console.log(s8.slice(-4));
+
+    // 위 string에서 파일명 출력
+    console.log(s7.slice(0, -5));
+    console.log(s8.slice(0, -5));
+
+    // 아래 string에서 파일명 출력
+    let s9 = 'imagehello.jpeg';
+    let s10 = 'image.png';
+
+    console.log(s9.slice(0, s9.indexOf('.')));
+    console.log(s10.slice(0, s10.indexOf('.')));
+
+    // 5. split: 문자열 나누기
+    // 잘라내서 array로 저장
+    let s11 = "hello world nice to meet you";
+    console.log(s11.split(' '));
+    let s12 = "010-1234-5678";
+    console.log(s12.split('-'));
+
+    // toLowerCase(), toUpperCase() 대소문자로 변경
+    // 6. trim: 문자열 앞 뒤 공백 제거
+    let s13 = '    hello world    ';
+    console.log(s13.trim());
+
+</script>
+</body>
+</html>

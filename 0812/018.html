@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>형변환</title>
+</head>
+<body>
+<script>
+    // 문자열을 숫자로 변환
+    console.log(parseInt('hello')); // NaN (문자열 'hello'는 숫자로 변환 불가)
+    console.log(parseInt('30hello')); // 30 (문자열 '30b'에서 숫자 부분만 변환)
+    console.log(parseFloat('45.4')); // 45.4 (문자열 '45.4'를 실수로 변환)
+    console.log(parseInt('45.4')); // 45.4 (문자열 '45.4'를 실수로 변환)
+
+    // 숫자를 문자열로 변환
+    (5).toString()
+
+    // isNaN 함수
+    // isNaN 은 헷갈리니까 되도록 Number.isNan 사용하세요
+    console.log(isNaN('5')); // false (문자열 '5'는 숫자로 변환 가능)
+    console.log(isNaN(3)); // false (숫자 3은 숫자)
+    console.log(isNaN('b3')); // true (문자열 'b3'는 숫자로 변환 불가)
+    console.log(isNaN('3b')); // true (문자열 '3b'는 숫자로 변환 불가)
+    console.log(isNaN(undefined)); // true (undefined는 숫자로 변환 불가)
+
+    console.log(Number.isNaN(undefined)); // false (undefined는 NaN이 아님)
+    console.log(Number.isNaN(null)); // false (null은 NaN이 아님)
+    console.log(Number.isNaN(NaN)); // true (NaN은 NaN)
+
+    // math 함수
+    console.log(Math.pow(2, 3)); // 8 (2의 3승)
+    console.log(Math.sqrt(16)); // 4 (16의 제곱근)
+    console.log(Math.round(10.6)); // 11 (반올림)
+    console.log(Math.ceil(10.2)); // 11 (올림)
+    console.log(Math.floor(10.6)); // 10 (내림)
+    console.log(Math.random()); // 0부터 1 사이의 난수 (컴퓨터에 '난수' 자체는 없지만 비슷하게 구현해냄)
+    console.log(Math.PI); // 1부터 10 사이의 난수
+</script>
+</body>
+</html>
