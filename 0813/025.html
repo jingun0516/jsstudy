@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>콜백함수</title>
+</head>
+<body>
+<script>
+    // https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/Operator_precedence
+    // 문제1: 원의 넓이를 구하는 함수
+    // 입력: 반지름
+    // 함수의 형태: 함수 선언문, 함수 표현식
+    function circle1(radius) {
+        let extend = x ** 2 * Math.PI;
+        return extend;
+    }
+
+    let circle2 = function (radius) {
+        let extend = x ** 2 * Math.PI;
+        return extend;
+    };
+
+    let circle3 = (x) => {
+        let extend = x ** 2 * Math.PI;
+        return extend;
+    };
+
+    // 문제2: 직사각형의 넓이를 구하는 함수
+    // 입력: 밑변, 높이
+    // 함수의 형태: 함수 선언문, 함수 표현식, 화살표 함수
+    function rectangle1(width, height) {
+        let extend = width * height;
+        return extend;
+    }
+
+    let rectangle2 = function (width, height) {
+        let extend = width * height;
+        return extend;
+    };
+
+    let rectangle3 = (width, height) => {
+        let extend = width * height;
+        return extend;
+    };
+</script>
+</body>
+</html>

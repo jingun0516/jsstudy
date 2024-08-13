@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>콜백함수</title>
+</head>
+<body>
+<script>
+    // 일급 함수란?
+    // 함수를 값으로 다룰 수 있다.
+    let a = console.log;
+    let b = alert;
+    let c = confirm;
+    let d = parseInt;
+
+    a("Hello, World!");
+
+    // 콜백 함수
+    // 나중에 널 불러줄께!
+    // 함수를 값으로 다루는 기술 중 하나
+    // 함수를 다른 함수의 인자(아규먼트)로 넘길 수 있다.
+    // (함수를 리턴할 수도 있다.)
+
+    function licat(f1, f2) {
+        f1(f2("10") + f2("20"));
+        return f1;
+    }
+
+    licat(a, d)
+</script>
+</body>
+</html>

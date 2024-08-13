@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>조건문</title>
+</head>
+<body>
+<script>
+    let 초록불 = false;
+
+    if (초록불) {
+        console.log('횡단보도를 건넙니다.');
+    } else {
+        console.log('기다립니다.');
+    }
+
+    if (true) {
+        console.log('실행합니다');
+    }
+
+    if (false) {
+        console.log('실행합니다1');
+        if (true) {
+            console.log('실행합니다2');
+        }
+    }
+
+    if (3 < 10) {
+        console.log('실행합니다3');
+    }
+
+    const value1 = 'hello'; // true 판단
+    const value2 = ''; // false 판단
+    const value3 = null; // false 판단
+    const value4 = []; // 주의!! 빈 배열도 true 판단
+
+    if (value4){
+        console.log('value1은 Truthy한 값입니다.');
+    }
+
+    // 한 줄의 경우 중괄호 생략 가능합니다.
+    if (true) console.log('중괄호를 생략했습니다.');
+
+    // if, else if, else
+    let score = 91;
+    let grade;
+
+    if (score > 90) {
+        grade = 'A';
+    } else if (score > 80) {
+        grade = 'B';
+    } else if (score > 70) {
+        grade = 'C';
+    } else if (score > 60) {
+        grade = 'D';
+    } else {
+        grade = 'F';
+    }
+
+    console.log(`당신의 학점은 ${grade}입니다.`);
+
+
+    // 만약 위 구문이 if문으로만 되어 있다면 무슨 문제가 있는지 확인해보세요.
+    let score1 = 91;
+    let grade1;
+
+    if (score1 > 90) {
+        grade = 'A';
+    }
+    if (score1 > 80) {
+        grade = 'B';
+    }
+    if (score1 > 70) {
+        grade = 'C';
+    }
+    if (score1 > 60) {
+        grade = 'D';
+    }
+    console.log(`당신의 학점은 ${grade}입니다.`);
+
+    // switch문
+    let fruit = 'apple';
+    switch (fruit) {
+        case 'banana':
+            console.log('바나나입니다.');
+            break;
+        case 'apple':
+            console.log('사과입니다.');
+            break;
+        case 'mango':
+            console.log('망고입니다.');
+            break;
+        default:
+            console.log('일치하는 과일이 없습니다.');
+    }
+
+    const attackType = '빔공격';
+
+    switch (attackType) {
+        case '빔공격':
+        case '할퀴기공격':
+            console.log('10에 데미지를 입혔습니다.')
+            break;
+        case '방어막공격':
+            console.log('5에 데미지를 입혔습니다.')
+            break;
+    }
+
+    switch (2) {
+        case 1:
+            console.log('월요일입니다.');
+            break;
+        case 2:
+            console.log('화요일입니다.');
+            break;
+        case 3:
+            console.log('수요일입니다.');
+            break;
+        case 4:
+            console.log('목요일입니다.');
+            break;
+        case 5:
+            console.log('금요일입니다.');
+            break;
+        default:
+            console.log('주말입니다.');
+            break;
+    }
+
+    switch (2) {
+        case 1:
+            console.log('월요일입니다.');
+        case 2:
+            console.log('화요일입니다.');
+        case 3:
+            console.log('수요일입니다.');
+        case 4:
+            console.log('목요일입니다.');
+        case 5:
+            console.log('금요일입니다.');
+        default:
+            console.log('주말입니다.');
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전개구문</title>
+</head>
+<body>
+<script>
+    // 전개구문 디스트럭처링
+    Math.max(1, 2, 3, 4, 5); // 5
+    Math.max([1, 2, 3, 4, 5]); // NaN
+
+    const numbers = [1, 2, 3, 4, 5];
+    Math.max(numbers); // NaN
+    Math.max(...numbers); // 5
+
+    const a = [1, 2, 3];
+    const b = [4, 5, 6];
+    const c = [...a, ...b]; // [1, 2, 3, 4, 5, 6]
+    const d = [a, ...b]; // [[1, 2, 3], 4, 5, 6]
+
+
+    const 과일들 = ['사과', '파인애플', '수박'];
+    const 과일들2 = 과일들
+
+    과일들2[0] = '포도';
+    console.log(과일들); // ['포도', '파인애플', '수박']
+
+    const 과일들3 = [...과일들];
+    과일들3[0] = '바나나';
+    console.log(과일들); // ['포도', '파인애플', '수박']
+
+    const one = ['사과', '파인애플', '수박']
+    const two = ['사과', '파인애플', '수박']
+    console.log(one === two); // false
+
+
+    const 위니브1 = { 개리: 1, 빙키: 2 };
+    const 위니브2 = { 라이캣: 3 };
+    const 위니브3 = { ...위니브1, ...위니브2 };
+
+    console.log(위니브3);
+</script>
+</body>
+</html>

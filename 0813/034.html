@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>배열과 객체 연습문제</title>
+</head>
+<body>
+<script>
+    // 문제 1번
+    // 다음 arr에서 평균을 구해주세요. forEach 메서드를 사용해주세요.
+    const arr = [10, 20, 30, 40, 50];
+    let sum = 0;
+    arr.forEach(v=>{
+        sum += v;
+    });
+    console.log(sum/arr.length);
+
+    // 문제 2번
+    // 다음 회전초밥 배열에서 3번째 먹을 수 있는 초밥은 무엇인가요? 차례대로 먹습니다.
+    const sushi = ['연어', '참치', '광어', '바다장어', '우럭'];
+    for(let i = 0; i < 2; i++)
+        sushi.shift();
+    console.log(sushi.shift());
+
+    // 문제 3번
+    // 다음 객체에서 직원 나이의 평균을 구하세요.
+    const employees = [
+        {
+            name: 'hojun',
+            age: 27
+        },
+        {
+            name: 'minji',
+            age: 25
+        },
+        {
+            name: 'jihye',
+            age: 30
+        }
+    ];
+
+    let ageSum = 0;
+    employees.forEach(v => {
+        ageSum += v['age'];
+    });
+    console.log(ageSum/employees.length);
+
+    let ageSum2 = 0;
+    const ages = employees.map(v=>v['age']);
+    ages.forEach(v => ageSum2 += v);
+    console.log(ageSum2 / employees.length);
+
+    // 문제 4번
+    // '010 0000 0000'을 '010-0000-0000'으로 바꿔주세요.
+    const phone = '010 0000 0000';
+    console.log(phone.replaceAll(' ','-'));
+    console.log(phone.split(' ').join('-'));
+
+</script>
+</body>
+</html>

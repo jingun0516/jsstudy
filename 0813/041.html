@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>this</title>
+</head>
+<body>
+<script>
+    // this는 글로벌 기업에서도 이 코드의 사용을 주의해서 사용하거나 지양하는 경향이 있습니다.
+    // this는 상황에 따라 다르게 동작할 수 있기 때문에 외워야 하는 예외 케이스가 너무 많습니다.
+    // this는 '나 자신 + @'이라고 생각을 해주시면, 초급자 분들에게는 충분하다 생각합니다.
+
+    console.log(this); // window
+    window.alert('hello');
+    this.alert('hello');
+
+    function f() {
+        console.log(this); // window
+    }
+    f();
+
+    const obj = {
+        name: 'licat',
+        f: function () {
+            console.log(this);
+        },
+    };
+
+    obj.f(); // obj
+
+    function Person(name) {
+        this.name = name;
+        console.log(this);
+        // return this
+    }
+
+    const person1 = new Person('licat');
+    // Person { name: "licat"}
+    const person2 = new Person('mura');
+    // Person { name: "mura"}
+
+    let arr1 = [1,2,3,4,5];
+    let arr2 = arr1;
+    arr1[0] = 10;
+    console.log(arr2);
+</script>
+</body>
+</html>

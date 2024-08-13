@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열의 메소드1</title>
+</head>
+<body>
+<script>
+    // push, pop
+    // C++ dequeue == push_front(), pop_front()
+    const arr = [1, 2, 3];
+    arr.push(4);
+    console.log(arr); // [1, 2, 3, 4]
+
+    arr.pop();
+    console.log(arr); // [1, 2, 3]
+
+    const arr2 = [1, 2, 3];
+    const last = arr2.pop();
+    console.log(last); // 3
+
+    // shift, unshift
+    // C++ dequeue == push_back(), pop_back()
+    const arr3 = [10, 20, 30];
+    arr3.shift();
+    console.log(arr3); // [20, 30]
+
+    arr3.unshift(40, 50);
+    console.log(arr3); // [40, 50, 20, 30]
+
+    arr3.unshift(100);
+    console.log(arr3); // [100, 40, 50, 20, 30]
+
+    // 큐
+    // 큐는 원통 놀이기구라고 생각을 하겠습니다.
+    // 먼저 들어간 사람이 먼저 나오게 됩니다.
+    // push, shift로 queue 구현하기 - 1
+    const queue = [];
+    queue.push(1);
+    queue.push(2);
+    queue.push(3);
+    console.log(queue); // [1, 2, 3]
+    queue.shift();
+
+    // unshift, pop으로 queue 구현하기 - 2
+    const queue2 = [];
+    queue2.unshift(1);
+    queue2.unshift(2);
+    queue2.unshift(3);
+    console.log(queue2); // [3, 2, 1]
+    queue2.pop();
+</script>
+</body>
+</html>
