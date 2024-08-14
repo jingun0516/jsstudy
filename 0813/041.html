@@ -30,21 +30,28 @@
 
     obj.f(); // obj
 
+    ////////////////////////
+
     function Person(name) {
         this.name = name;
+        console.log(this);
+    }
+
+    const persontest = Person('licat')
+
+    ////////////////////////
+
+    function Person(name) {
+        this.name = name;
+        this.age = 1;
         console.log(this);
         // return this
     }
 
     const person1 = new Person('licat');
-    // Person { name: "licat"}
+    // Person { name: "licat" }
     const person2 = new Person('mura');
-    // Person { name: "mura"}
-
-    let arr1 = [1,2,3,4,5];
-    let arr2 = arr1;
-    arr1[0] = 10;
-    console.log(arr2);
+    // Person { name: "mura" }
 </script>
 </body>
 </html>

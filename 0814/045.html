@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Map</title>
+</head>
+<body>
+<script>
+    // ES6 : 2015년
+    // 다른것들 ECMA Script 2017
+    // Map
+    // key, value로 이루어진 데이터를 저장할 때 사용
+    let m = new Map();
+
+    m.set('하나', '1');
+    m.set(1, '하나');
+    m.set(true, 1);
+    m.set(false, 0);
+
+    console.log(m);
+    console.log(m.get('하나'));
+    console.log(m.get(true));
+
+    // in 연산자
+    console.log('하나' in {'하나': '1', '둘' :'2'}); // true
+    console.log('하나' in m); // false    Map에서는 사용 불가
+
+    // has
+    console.log(m.has('하나'));   // true
+
+    console.log(m.delete('하나'));    // true, 데이터 (key)
+    console.log(m.size);    // true, 데이터 (key)
+    // m.clear();   모든 데이터 삭제
+
+    const data = new Map().set('name', 'licat').set('age', 10).set('height', 180);
+    console.log(data);
+    for (const value of data) {
+        console.log(value[0]);
+        console.log(value[1]);
+    }
+
+    for (const [key, value] of data) {
+        console.log(key);
+        console.log(value);
+    }
+
+    console.log([...data.keys()]); // ["name", "age", "height"]
+    console.log([...data.values()]); // ["hojun", 10, 180]
+
+    // 배열을 Map으로 변환
+    let temp = new Map([
+        [1, 10],
+        [2, 20],
+        [3, 30],
+        [4, 40],
+    ]);
+    console.log(temp); // Map(4) {1 => 10, 2 => 20, 3 => 30, 4 => 40}
+
+    // 객체를 Map으로 변환
+    let temp2 = new Map(Object.entries({ one: 1, two: 2 }));
+    console.log(temp2); // Map(2) {"one" => 1, "two" => 2}
+
+    // Map을 객체로 변환
+    const temp3 = Object.fromEntries(temp2);
+    console.log(temp3); // { one: 1, two: 2 }
+
+    // Map과 Object의 차이
+    // Object의 키는 문자열과 심볼 타입만 가능
+    // Map은 m.asdfasdf() 와 같은 메소드로 사용 가능
+</script>
+</body>
+</html>

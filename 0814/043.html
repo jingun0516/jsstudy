@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<body>
+<input type="checkbox" id="checkbox"/> 체크해보세요.
+
+<script>
+    const checkbox = document.getElementById('checkbox');
+    checkbox.addEventListener('change', function () {
+        if (this.checked) {
+            document.body.style.backgroundColor = 'lightblue';
+        } else {
+            document.body.style.backgroundColor = '';
+        }
+    });
+</script>
+</body>
+</html>

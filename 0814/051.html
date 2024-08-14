@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM 제어하기</title>
+    <style>
+        .blue {
+            background-color: blue;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+<button class="hello">HELLO!</button>
+<script>
+    // 이 데이터는 통신을 통해 받아온 데이터
+    const data = {
+        name: 'hello',
+        content: 'world',
+        src: 'https://via.placeholder.com/300',
+        price: 3000
+    };
+
+    document.body.innerHTML = `
+    <section>
+        <img src="${data.src}" alt="이미지">
+        <h2>${data.name}</h2>
+        <p>${data.content}</p>
+        <p>${data.price}</p>
+    </section>
+`;
+
+    // 050 의 3.요소 제어(1번)와 비교
+    // 1. 가독성 증가
+    // 2. 코드 작성 난이도 하락
+    // 3. 요소 컨트롤 (유지보수성) 은 1번이 더 좋음
+    // 4. 재활용성은 1번이 더 좋음
+    // 5. 이렇게 생산된 노드는 이벤트 같은 것을 갖고 있지 않음. 나중에 별도로 추가해야 함
+
+</script>
+</body>
+</html>
