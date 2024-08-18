@@ -37,7 +37,7 @@
             left: 1206px;
             position: absolute;
             display: flex;
-            align-content: center;
+            align-items: center;
             justify-content: center;
             /*margin: 41px 509px 41px 1206px;*/
         }
@@ -68,13 +68,14 @@
             background-color: #D97652;
         }
 
-        .header-section{
+        .header-section {
             display: flex;
             flex-direction: column;
             gap: 40px;
             justify-content: center;
-            align-content: center;
+            align-items: center;
         }
+
         h1 {
             font-family: Pretendard;
             font-size: 48px;
@@ -113,7 +114,8 @@
             border-radius: 40px;
             background-color: #D97652;
         }
-        .h1cat{
+
+        .h1cat {
             width: 415px;
             height: 766px;
             position: absolute;
@@ -129,7 +131,8 @@
             left: 320px;
             border-radius: 30px;
         }
-        .h2content h2{
+
+        .h2content h2 {
             font-family: Pretendard;
             font-size: 36px;
             font-weight: 700;
@@ -141,7 +144,8 @@
             top: 1152px;
             left: 1090px;
         }
-        .h2content p{
+
+        .h2content p {
             font-family: Pretendard;
             font-size: 16px;
             font-weight: 400;
@@ -153,7 +157,8 @@
             top: 1317px;
             left: 1090px;
         }
-        .h3-section h3{
+
+        .h3-section h3 {
             font-family: Pretendard;
             font-size: 48px;
             font-weight: 700;
@@ -166,7 +171,8 @@
             left: 523px;
             color: #D97652;
         }
-        .h3-section p{
+
+        .h3-section p {
             font-family: Pretendard;
             font-size: 16px;
             font-weight: 400;
@@ -178,10 +184,12 @@
             top: 1670px;
             left: 605px;
         }
-        .h3-section span{
+
+        .h3-section span {
             color: #D97652;
         }
-        .h3cat1{
+
+        .h3cat1 {
             display: flex;
             flex-direction: row;
             position: absolute;
@@ -189,7 +197,8 @@
             top: 1800px;
             left: 320px;
         }
-        .h3cat2{
+
+        .h3cat2 {
             display: flex;
             flex-direction: row;
             position: absolute;
@@ -197,13 +206,15 @@
             top: 2250px;
             left: 320px;
         }
+
         .h3cat1 img, .h3cat2 img {
             width: 378px;
             height: 378px;
             border-radius: 30px;
             box-shadow: 10px 10px 30px 0px #00000040;
         }
-        .showmore{
+
+        .showmore {
             position: absolute;
             top: 2728px;
             left: 815px;
@@ -214,14 +225,16 @@
             justify-content: center;
             text-align: center;
         }
-        .showmore p{
+
+        .showmore p {
             font-family: Pretendard;
             font-size: 24px;
             font-weight: 700;
             line-height: 30px;
             text-align: center;
         }
-        .btn-showmore{
+
+        .btn-showmore {
             width: 143px;
             height: 50px;
             position: absolute;
@@ -236,13 +249,15 @@
             line-height: 20px;
             text-align: center;
         }
-        .rectimg{
+
+        .rectimg {
             width: 1278px;
             height: 1px;
             position: absolute;
             top: 2916px;
             left: 320px;
         }
+
         .where {
             /*position: absolute;*/
             /*top: 0px;*/
@@ -250,7 +265,8 @@
             display: flex;
             flex-direction: column;
         }
-        .where h3{
+
+        .where h3 {
             position: absolute;
             top: 2985px;
             left: 320px;
@@ -261,7 +277,8 @@
             text-align: left;
             width: 264px;
         }
-        .where p{
+
+        .where p {
             position: absolute;
             width: 395px;
             height: 20px;
@@ -274,7 +291,8 @@
             text-align: left;
             color: #606367;
         }
-        .where img{
+
+        .where img {
             width: 1278px;
             left: 320px;
             height: 520px;
@@ -283,86 +301,275 @@
             border-radius: 12px;
         }
 
+        .cat-footer {
+            width: 1920px;
+            /*height: 340px + 181 + 160;*/
+            height: 681px;
+            position: absolute;
+            /*top: 3819px - 181;*/
+            top: 3638px;
+            background-color: #F2E9D899;
+        }
+        .bef-cat-footer{
+            width: 1920px;
+            height: 181px;
+            position: absolute;
+            background-color: #FFF;
+            top: 3638px;
+        }
+
+        .subscribe {
+            width: 1280px;
+            height: 201px;
+            position: absolute;
+            top: 3718px;
+            left: 320px;
+            background-color: #263140;
+            border-radius: 30px;
+        }
+
+        .sub-text-group {
+            font-family: Pretendard;
+            text-align: left;
+            color: #FFF;
+            position: absolute;
+            top: 51px;
+            left: 58px;
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+
+        .sub-text-group h3 {
+            font-size: 36px;
+            font-weight: 700;
+            line-height: 45px;
+        }
+
+        .sub-text-group p {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 18px;
+        }
+
+        .enter-email-box {
+            position: absolute;
+            width: 530px;
+            height: 60px;
+            top: 70px;
+            left: 692px;
+            border-radius: 60px;
+            background-color: #FFFFFF;
+            display: flex;
+            align-items: center;
+        }
+
+        .email {
+            position: absolute;
+            /*top: 18px;*/
+            left: 28px;
+            width: 24px;
+            height: 24px;
+        }
+
+        .enter-email-box input {
+            position: absolute;
+            /*top: 20px;*/
+            left: 68px;
+            width: 200px;
+            border: 0;
+        }
+
+        .enter-email-box input::placeholder {
+            font-family: Pretendard;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 20px;
+            text-align: left;
+            color: #767676;
+        }
+
+        .enter-email-box .btn-subscribe {
+            position: absolute;
+            /*top: 5px;*/
+            left: 389px;
+            width: 135px;
+            height: 50px;
+            color: #FFF;
+            background-color: #D97652;
+            border-radius: 40px;
+            font-family: Pretendard;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 20px;
+            text-align: center;
+        }
+
+        footer {
+            width: 1920px;
+            height: 160px;
+            position: absolute;
+            top: 4159px;
+            display: flex;
+            align-items: center;
+            background-color: #FFF;
+        }
+
+        footer .logo-footer {
+            width: 226px;
+            height: 70px;
+            position: absolute;
+            left: 320px;
+        }
+
+        footer .footer-icongroup {
+            position: absolute;
+            left: 1372px;
+            display: flex;
+            gap: 20px;
+        }
+
+        .footer-icongroup img {
+            width: 42px;
+            height: 42px;
+        }
+
+        .btn-scrollup {
+            width: 50px;
+            height: 50px;
+            position: fixed;
+            right: 24px;
+            bottom: 179px;
+        }
+
+        .btn-scrollup {
+            background-image: url('./images/scroll-top-btn.png');
+        }
+
+        .btn-scrollup:hover {
+            background-image: url('./images/scroll-top-btn2.png');
+        }
+
     </style>
 </head>
 <body>
-<div class="allpage">
-    <div class="firstpage">
-        <header>
-            <div class="top-nav-bar">
-                <img src="images/logohodu.png" alt="호두 로고" class="logo-hodu">
-                <nav class="top-nav-element">
-                    <ul>
-                        <li>Home</li>
-                        <li>About</li>
-                        <li>Support</li>
-                    </ul>
-                </nav>
-                <button class="btn-download1">Download</button>
-            </div>
-        </header>
-        <section class="header-section">
-            <h1>
-                Lorem Ipsum is simply<br>
-                dummy text of the printing and
-            </h1>
-            <p class="h1content">
-                Lorem Ipsum is simply dummy text of the printing and
-                typesetting industry.<br>
-                Lorem Ipsum has been the industry's standard dummy text
-                ever since the 1500s, when an unknown
-            </p>
-            <button class="btn-download2">Download</button>
-        </section>
-        <img src="images/h1cat.png" alt="h1 고양이" class="h1cat">
-    </div>
-    <main>
-        <section class="h2-section">
+<div class="firstpage">
+    <header>
+        <div class="top-nav-bar">
+            <img src="images/logohodu.png" alt="호두 로고" class="logo-hodu">
+            <nav class="top-nav-element">
+                <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Support</li>
+                </ul>
+            </nav>
+            <button class="btn-download1">Download</button>
+        </div>
+    </header>
+    <section class="header-section">
+        <h1>
+            Lorem Ipsum is simply<br>
+            dummy text of the printing and
+        </h1>
+        <p class="h1content">
+            Lorem Ipsum is simply dummy text of the printing and
+            typesetting industry.<br>
+            Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown
+        </p>
+        <button class="btn-download2">Download</button>
+    </section>
+    <img src="images/h1cat.png" alt="h1 고양이" class="h1cat">
+</div>
+<main>
+    <section class="h2-section">
         <div class="maincat">
             <img src="./images/maincatimg.png" alt="main 고양이" class="maincatimg">
         </div>
-            <div class="h2content">
-                <h2>
-                    Lorem Ipsum is simply<br>
-                    dummy text of the printing<br>
-                    and dummy text
-                </h2>
-                <p>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting<br>
-                    industry.
-                </p>
-            </div>
-        </section>
-        <section class="h3-section">
-            <h3>
-                dummy text of the printing and dummy
-            </h3>
+        <div class="h2content">
+            <h2>
+                Lorem Ipsum is simply<br>
+                dummy text of the printing<br>
+                and dummy text
+            </h2>
             <p>
-                Lorem Ipsum is simply <span>dummy text</span> of the printing and typesetting industry.<br>
-                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
+                Lorem Ipsum is simply dummy text of the printing and typesetting<br>
+                industry.
             </p>
-            <div class="h3cat1">
-                <img src="./images/cat1_1.png" alt="고양이1-1" class="h3cat1-1">
-                <img src="./images/cat1_2.png" alt="고양이1-2" class="h3cat1-2">
-                <img src="./images/cat1_3.png" alt="고양이1-3" class="h3cat1-3">
-            </div>
-            <div class="h3cat2">
-                <img src="./images/cat2_1.png" alt="고양이2-1" class="h3cat2-1">
-                <img src="./images/cat2_2.png" alt="고양이2-2" class="h3cat2-2">
-                <img src="./images/cat2_3.png" alt="고양이2-3" class="h3cat2-3">
-            </div>
-        </section>
-        <div class="showmore">
-            <p>Continue exploring HODU</p>
-            <button class="btn-showmore">Show more</button>
         </div>
-        <img src="./images/rect.png" alt="선 긋기" class="rectimg">
-        <section class="where">
-            <h3>Where you'll be</h3>
-            <p class="place">330, Cheomdan-ro, Jeju-si, Jeju-do, Republic of Korea</p>
-            <img src="./images/googlemapex.png" alt="지도" class="mapex">
-        </section>
-    </main>
-</div>
+    </section>
+    <section class="h3-section">
+        <h3>
+            dummy text of the printing and dummy
+        </h3>
+        <p>
+            Lorem Ipsum is simply <span>dummy text</span> of the printing and typesetting industry.<br>
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
+        </p>
+        <div class="h3cat1">
+            <img src="./images/cat1_1.png" alt="고양이1-1" class="h3cat1-1">
+            <img src="./images/cat1_2.png" alt="고양이1-2" class="h3cat1-2">
+            <img src="./images/cat1_3.png" alt="고양이1-3" class="h3cat1-3">
+        </div>
+        <div class="h3cat2">
+            <img src="./images/cat2_1.png" alt="고양이2-1" class="h3cat2-1">
+            <img src="./images/cat2_2.png" alt="고양이2-2" class="h3cat2-2">
+            <img src="./images/cat2_3.png" alt="고양이2-3" class="h3cat2-3">
+        </div>
+    </section>
+    <div class="showmore">
+        <p>Continue exploring HODU</p>
+        <button class="btn-showmore">Show more</button>
+    </div>
+    <img src="./images/rect.png" alt="선 긋기" class="rectimg">
+    <section class="where">
+        <h3>Where you'll be</h3>
+        <p class="place">330, Cheomdan-ro, Jeju-si, Jeju-do, Republic of Korea</p>
+        <img src="./images/googlemapex.png" alt="지도" class="mapex">
+    </section>
+    <img src="./images/cat_footer.png" alt="footer냥이" class="cat-footer">
+    <div class="bef-cat-footer"></div>
+    <button class="btn-scrollup"></button>
+    <script>
+        const btn_scrollup = document.querySelector('.btn-scrollup');
+        btn_scrollup.addEventListener('scroll', function () {
+            const scrollPosition = window.scrollY;
+            if (scrollPosition > 100) {
+                btn_scrollup.style.opacity = 1;
+            } else {
+                btn_scrollup.style.opacity = 0;
+            }
+        });
+
+        btn_scrollup.addEventListener('click', function () {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+    <section class="subscribe">
+        <div class="sub-text-group">
+            <h3>Subscribe to our Blog post</h3>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br>
+                Lorem Ipsum has been the industry's standard dummy text </p>
+        </div>
+        <div class="enter-email-box">
+            <img src="./images/mail.svg" alt="이메일아이콘" class="email">
+            <input type="text" class="input-email" placeholder="Enter your e-mail address">
+            <button class="btn-subscribe">Subscribe</button>
+        </div>
+    </section>
+</main>
+<footer>
+    <img src="./images/logohodu.png" alt="호두 로고" class="logo-footer">
+    <div class="footer-icongroup">
+        <img src="./images/icon-blog.png" alt="블로그아이콘">
+        <img src="./images/icon-insta.png" alt="인스타아이콘">
+        <img src="./images/icon-facebook.png" alt="페북아이콘">
+        <img src="./images/icon-youtube.png" alt="유투브아이콘">
+    </div>
+</footer>
 </body>
 </html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>modal</title>
+    <link rel="stylesheet" href="../reset.css"/>
+    <style>
+        @font-face {
+            font-family: 'Pretendard';
+            src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+            font-weight: 400;
+            font-style: normal;
+        }
+        .modalpage{
+            width: 600px;
+            height: 400px;
+            background-image: url('./images/modal.png');
+            border-radius: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .modalpage img{
+            width: 110px;
+            height: 112px;
+            position: absolute;
+            top: 60px;
+            left: 245px;
+        }
+        .modalpage h1{
+            font-family: Pretendard;
+            font-size: 36px;
+            font-weight: 700;
+            line-height: 45px;
+            text-align: center;
+            width: 212px;
+            height: 46px;
+            position: absolute;
+            top: 196px;
+            left: 194px;
+            color: #D97652;
+        }
+        .modalpage p{
+            font-family: Pretendard;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 18px;
+            text-align: center;
+            position: absolute;
+            top: 254px;
+            left: 108px;
+        }
+        .modalpage button{
+            width: 183px;
+            height: 50px;
+            background-color: #D97652;
+            border-radius: 40px;
+            position: absolute;
+            top: 310px;
+            left: 205px;
+            font-family: Pretendard;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 20px;
+            text-align: center;
+            color: #FFF;
+        }
+    </style>
+</head>
+<body>
+<div class="modalpage">
+    <img src="./images/modal-cat.png" alt="modal 냥이" class="modalcat">
+    <h1>Thank You!</h1>
+    <p>Lorem Ipsum is simply dummy text of the printing industry.</p>
+    <button class="btn-lovehodu">OK! I Love HODU</button>
+</div>
+</body>
+</html>
