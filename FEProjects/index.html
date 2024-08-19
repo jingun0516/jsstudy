@@ -4,12 +4,26 @@
     <meta charset="UTF-8">
     <title>Figma</title>
     <link rel="stylesheet" href="../reset.css"/>
+    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBcDC2THpQnoZlUuGeiTnntgUhQL5p2nwk&callback=initMap"></script>
     <style>
         @font-face {
             font-family: 'Pretendard';
             src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
             font-weight: 400;
             font-style: normal;
+        }
+
+        body {
+            width: 1920px;
+            /*height: 4319-78px;*/
+            height: 4241px;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 10000;
+            background-color: #F2E9D8;
         }
 
         .firstpage {
@@ -292,7 +306,7 @@
             color: #606367;
         }
 
-        .where img {
+        .where #map {
             width: 1278px;
             left: 320px;
             height: 520px;
@@ -310,7 +324,8 @@
             top: 3638px;
             background-color: #F2E9D899;
         }
-        .bef-cat-footer{
+
+        .bef-cat-footer {
             width: 1920px;
             height: 181px;
             position: absolute;
@@ -360,6 +375,11 @@
             left: 692px;
             border-radius: 60px;
             background-color: #FFFFFF;
+            display: flex;
+            align-items: center;
+        }
+
+        .enter-email-box form {
             display: flex;
             align-items: center;
         }
@@ -429,9 +449,26 @@
             gap: 20px;
         }
 
-        .footer-icongroup img {
+        .footer-icongroup button {
             width: 42px;
             height: 42px;
+            background-size: cover;
+        }
+
+        .footer-icongroup .icon-blog {
+            background-image: url('./images/icon-blog.png');
+        }
+
+        .footer-icongroup .icon-insta {
+            background-image: url('./images/icon-insta.png');
+        }
+
+        .footer-icongroup .icon-facebook {
+            background-image: url('./images/icon-facebook.png');
+        }
+
+        .footer-icongroup .icon-youtube {
+            background-image: url('./images/icon-youtube.png');
         }
 
         .btn-scrollup {
@@ -440,33 +477,97 @@
             position: fixed;
             right: 24px;
             bottom: 179px;
-        }
-
-        .btn-scrollup {
             background-image: url('./images/scroll-top-btn.png');
+            opacity: 0;
         }
 
         .btn-scrollup:hover {
             background-image: url('./images/scroll-top-btn2.png');
         }
 
+        .modalpage {
+            /*position: absolute;*/
+            /*top: 3627px;*/
+            /*left: -700px;*/
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 600px;
+            height: 400px;
+            background-image: url('./images/modal.png');
+            border-radius: 30px;
+            display: none;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .modalpage img {
+            width: 110px;
+            height: 112px;
+            position: absolute;
+            top: 60px;
+            left: 245px;
+        }
+
+        .modalpage h1 {
+            font-family: Pretendard;
+            font-size: 36px;
+            font-weight: 700;
+            line-height: 45px;
+            text-align: center;
+            width: 212px;
+            height: 46px;
+            position: absolute;
+            top: 196px;
+            left: 194px;
+            color: #D97652;
+        }
+
+        .modalpage p {
+            font-family: Pretendard;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 18px;
+            text-align: center;
+            position: absolute;
+            top: 254px;
+            left: 108px;
+        }
+
+        .modalpage button {
+            width: 183px;
+            height: 50px;
+            background-color: #D97652;
+            border-radius: 40px;
+            position: absolute;
+            top: 310px;
+            left: 205px;
+            font-family: Pretendard;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 20px;
+            text-align: center;
+            color: #FFF;
+        }
     </style>
 </head>
 <body>
+<header>
+    <div class="top-nav-bar">
+        <img src="images/logohodu.png" alt="호두 로고" class="logo-hodu">
+        <nav class="top-nav-element">
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Support</a></li>
+            </ul>
+        </nav>
+        <button class="btn-download1">Download</button>
+    </div>
+    <h1 style="display: none">hodu</h1>
+</header>
 <div class="firstpage">
-    <header>
-        <div class="top-nav-bar">
-            <img src="images/logohodu.png" alt="호두 로고" class="logo-hodu">
-            <nav class="top-nav-element">
-                <ul>
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Support</li>
-                </ul>
-            </nav>
-            <button class="btn-download1">Download</button>
-        </div>
-    </header>
     <section class="header-section">
         <h1>
             Lorem Ipsum is simply<br>
@@ -526,29 +627,12 @@
     <section class="where">
         <h3>Where you'll be</h3>
         <p class="place">330, Cheomdan-ro, Jeju-si, Jeju-do, Republic of Korea</p>
-        <img src="./images/googlemapex.png" alt="지도" class="mapex">
+        <div id="map"></div>
+<!--        <img src="./images/googlemapex.png" alt="지도" class="mapex">-->
     </section>
     <img src="./images/cat_footer.png" alt="footer냥이" class="cat-footer">
     <div class="bef-cat-footer"></div>
     <button class="btn-scrollup"></button>
-    <script>
-        const btn_scrollup = document.querySelector('.btn-scrollup');
-        btn_scrollup.addEventListener('scroll', function () {
-            const scrollPosition = window.scrollY;
-            if (scrollPosition > 100) {
-                btn_scrollup.style.opacity = 1;
-            } else {
-                btn_scrollup.style.opacity = 0;
-            }
-        });
-
-        btn_scrollup.addEventListener('click', function () {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-    </script>
     <section class="subscribe">
         <div class="sub-text-group">
             <h3>Subscribe to our Blog post</h3>
@@ -557,7 +641,9 @@
         </div>
         <div class="enter-email-box">
             <img src="./images/mail.svg" alt="이메일아이콘" class="email">
-            <input type="text" class="input-email" placeholder="Enter your e-mail address">
+            <form action="" id="submit-email">
+                <input type="email" class="input-email" name="value-email" placeholder="Enter your e-mail address">
+            </form>
             <button class="btn-subscribe">Subscribe</button>
         </div>
     </section>
@@ -565,11 +651,107 @@
 <footer>
     <img src="./images/logohodu.png" alt="호두 로고" class="logo-footer">
     <div class="footer-icongroup">
-        <img src="./images/icon-blog.png" alt="블로그아이콘">
-        <img src="./images/icon-insta.png" alt="인스타아이콘">
-        <img src="./images/icon-facebook.png" alt="페북아이콘">
-        <img src="./images/icon-youtube.png" alt="유투브아이콘">
+        <button class="icon-blog"></button>
+        <button class="icon-insta"></button>
+        <button class="icon-facebook"></button>
+        <button class="icon-youtube"></button>
     </div>
 </footer>
+
+<div class="modalpage">
+    <img src="./images/modal-cat.png" alt="modal 냥이" class="modalcat">
+    <h1>Thank You!</h1>
+    <p>Lorem Ipsum is simply dummy text of the printing industry.</p>
+    <button type="submit" class="btn-lovehodu">OK! I Love HODU</button>
+</div>
+
+<script>
+    window.initMap = () => {
+        const map = new google.maps.Map(document.querySelector('#map'), {
+            center: {lat: 37.24317528542883, lng: 131.86688500415858},
+            zoom: 8,
+        });
+    }
+</script>
+
+<script>
+    const btn_scrollup = document.querySelector('.btn-scrollup');
+    window.addEventListener('scroll', function () {
+        const scrollPosition = window.scrollY;
+        if (scrollPosition > 100) {
+            btn_scrollup.style.opacity = 1;
+        } else {
+            btn_scrollup.style.opacity = 0;
+        }
+    });
+
+    btn_scrollup.addEventListener('click', function () {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+</script>
+
+<script>
+    const input_email = document.querySelector('.input-email');
+    const button_email = document.querySelector('.btn-subscribe');
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const modalpage = document.querySelector('.modalpage');
+    const btn_modalclose = document.querySelector('.btn-lovehodu');
+    const form_submit = document.querySelector('#submit-email');
+    button_email.addEventListener('click', function (event) {
+        event.preventDefault();
+
+        const input_value = input_email.value;
+        if (!input_value) {
+            window.alert('이메일이 입력되지 않았습니다!');
+        } else if (!emailPattern.test(input_value)) {
+            window.alert('유효하지 않은 이메일입니다!');
+        } else {
+            modalpage.style.display = 'flex';
+        }
+    });
+
+    btn_modalclose.addEventListener('click', function (event) {
+        event.preventDefault();
+
+        const formData = new FormData(form_submit);
+        console.log('제출 폼 데이터 확인:');
+        formData.forEach((value, key) => {
+            console.log(`${key}: ${value}`);
+        });
+
+        // form_submit.submit();
+
+        modalpage.style.display = 'none';
+    });
+
+    /*
+    // 비동기식 접근을 통해 제출 후 새로고침X
+    btn_modalclose.addEventListener('click', function() {
+        const formData = new FormData(form_submit);
+        formData.forEach((value, key) => {
+            console.log(`${key}: ${value}`);
+        });
+        fetch(form_submit.action, {
+            method: 'POST',
+            body: formData,
+        })
+            .then(response => {
+                if (response.ok) {
+                    console.log('성공적으로 제출되었습니다.');
+                    modalpage.style.display = 'none'; // 모달 닫기
+                } else {
+                    console.error('제출 실패');
+                }
+            })
+            .catch(error => {
+                console.error('서버 요청 실패:', error);
+            });
+    });
+    */
+</script>
+
 </body>
 </html>
