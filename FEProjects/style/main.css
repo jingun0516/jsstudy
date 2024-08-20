@@ -8,12 +8,15 @@
 
 .container {
     width: 1920px;
+    position: relative;
 }
 
-.box-navbar-top {
+#header{
     position: sticky;
     top: 0;
     z-index: 10000;
+}
+.box-navbar-top {
     background-color: #F2E9D8;
     display: flex;
     flex-direction: row;
@@ -21,13 +24,13 @@
     height: 102px;
 }
 
-.box-navbar-top .img-logo-top {
+.box-navbar-top .img-logo {
     width: 130px;
     height: 40px;
     margin: 0 756px 0 320px;
 }
 
-.box-navbar-top .elem-navbar-top {
+.elem-navbar-top {
     width: 205px;
     height: 20px;
     display: flex;
@@ -36,7 +39,7 @@
     margin: 0 49px 0;
 }
 
-.box-navbar-top .elem-navbar-top ul {
+.elem-navbar-top ul {
     display: flex;
     flex-direction: row;
     gap: 30px;
@@ -46,7 +49,7 @@
     line-height: 20px;
 }
 
-.box-navbar-top .btn-header-down {
+.btn-header-down {
     font-size: 16px;
     font-weight: 700;
     line-height: 20px;
@@ -59,8 +62,14 @@
     background-color: #D97652;
 }
 
+main{
+    margin-left: 320px;
+}
+
 .container-first{
+    width: 1920px;
     height: 798px;
+    transform: translateX(-320px);
     background-color: #F2E9D8;
     display: flex;
     flex-direction: row;
@@ -110,270 +119,224 @@
     margin-top: 32px;
 }
 
-.maincatimg {
+.section-second{
+    margin-top: 80px;
+    display: flex;
+    flex-direction: row;
+}
+.img-cat-second {
     width: 660px;
     height: 390px;
-    position: absolute;
-    top: 1060px;
-    left: 320px;
     border-radius: 30px;
+    box-shadow: 10px 10px 30px 0px #00000040;
 }
 
-.h2content h2 {
+.box-second{
+    margin-left: 110px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.title-second {
     font-family: Pretendard;
     font-size: 36px;
     font-weight: 700;
     line-height: 45px;
     text-align: left;
-    position: absolute;
-    width: 510px;
-    height: 135px;
-    top: 1152px;
-    left: 1090px;
+    margin-top: 92px;
 }
 
-.h2content p {
+.desc-second {
     font-family: Pretendard;
     font-size: 16px;
     font-weight: 400;
     line-height: 20px;
     text-align: left;
-    position: absolute;
     width: 510px;
     height: 40px;
-    top: 1317px;
-    left: 1090px;
 }
 
-.h3-section h3 {
+.section-third{
+    margin-top: 120px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    width: 1280px;
+}
+
+.title-third {
     font-family: Pretendard;
     font-size: 48px;
     font-weight: 700;
     line-height: 60px;
-    text-align: center;
-    position: absolute;
-    width: 875px;
-    height: 60px;
-    top: 1570px;
-    left: 523px;
     color: #D97652;
 }
 
-.h3-section p {
+.desc-third {
     font-family: Pretendard;
     font-size: 16px;
     font-weight: 400;
     line-height: 20px;
-    text-align: center;
-    position: absolute;
-    width: 710px;
-    height: 42px;
-    top: 1670px;
-    left: 605px;
+    margin-top: 40px;
 }
 
-.h3-section span {
+.span-desc-third {
     color: #D97652;
+    font-weight: 700;
+    line-height: 20px;
 }
 
-.h3cat1 {
+.box-cats1 {
     display: flex;
     flex-direction: row;
-    position: absolute;
-    gap: 72px;
-    top: 1800px;
-    left: 320px;
+    gap: 73px;
+    margin-top: 88px;
 }
 
-.h3cat2 {
+.box-cats2 {
     display: flex;
     flex-direction: row;
-    position: absolute;
-    gap: 72px;
-    top: 2250px;
-    left: 320px;
+    gap: 73px;
+    margin-top: 72px;
 }
 
-.h3cat1 img, .h3cat2 img {
+.img-cats {
     width: 378px;
     height: 378px;
     border-radius: 30px;
     box-shadow: 10px 10px 30px 0px #00000040;
 }
 
-.showmore {
-    position: absolute;
-    top: 2728px;
-    left: 815px;
+.box-showmore {
+    width: 1280px;
     display: flex;
     flex-direction: column;
     gap: 28px;
-    align-content: center;
-    justify-content: center;
-    text-align: center;
+    margin-top: 100px;
+    font-family: Pretendard;
+    align-items: center;
 }
 
-.showmore p {
-    font-family: Pretendard;
+.desc-showmore {
     font-size: 24px;
     font-weight: 700;
     line-height: 30px;
-    text-align: center;
 }
 
 .btn-showmore {
     width: 143px;
     height: 50px;
-    position: absolute;
-    top: 58px;
-    left: 73.5px;
     border-radius: 40px;
     background-color: #D97652;
     color: #FFF;
-    font-family: Pretendard;
     font-size: 16px;
     font-weight: 700;
     line-height: 20px;
-    text-align: center;
 }
 
-.rectimg {
+.img-line {
     width: 1278px;
     height: 1px;
-    position: absolute;
-    top: 2916px;
-    left: 320px;
+    margin-top: 80px;
 }
 
-.where {
-    /*position: absolute;*/
-    /*top: 0px;*/
-    left: 320px;
+.section-map {
     display: flex;
     flex-direction: column;
+    font-family: Pretendard;
+    text-align: left;
 }
 
-.where h3 {
-    position: absolute;
-    top: 2985px;
-    left: 320px;
-    font-family: Pretendard;
+.title-map {
     font-size: 36px;
     font-weight: 700;
     line-height: 45px;
-    text-align: left;
-    width: 264px;
+    margin-top: 68px;
 }
 
-.where p {
-    position: absolute;
-    width: 395px;
-    height: 20px;
-    top: 3050px;
-    left: 320px;
-    font-family: Pretendard;
+.desc-map {
     font-size: 16px;
     font-weight: 500;
     line-height: 20px;
-    text-align: left;
     color: #606367;
+    margin-top: 20px;
 }
 
-.where #map {
-    width: 1278px;
-    left: 320px;
+#map {
+    width: 1280px;
     height: 520px;
-    position: absolute;
-    top: 3118px;
     border-radius: 12px;
+    margin-top: 48px;
 }
 
-.cat-footer {
+.box-footer-cat{
     width: 1920px;
-    /*height: 340px + 181 + 160;*/
-    height: 681px;
+    height: 340px;
     position: absolute;
-    /*top: 3819px - 181;*/
-    top: 3638px;
-    background-color: #F2E9D899;
+    left: 0;
+    bottom: 160px;
+    z-index: -1;
+    background-image: url('../images/cat-footer.png');
 }
 
-.bef-cat-footer {
-    width: 1920px;
-    height: 181px;
-    position: absolute;
-    background-color: #FFF;
-    top: 3638px;
-}
-
-.subscribe {
+.section-subscribe{
     width: 1280px;
     height: 201px;
-    position: absolute;
-    top: 3718px;
-    left: 320px;
     background-color: #263140;
     border-radius: 30px;
-}
-
-.sub-text-group {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: row;
+    gap: 168px;
     font-family: Pretendard;
     text-align: left;
     color: #FFF;
-    position: absolute;
-    top: 51px;
-    left: 58px;
+}
+
+.box-text-subscribe {
+    margin: 50px 0 0 58px;
     display: flex;
     flex-direction: column;
     gap: 18px;
 }
 
-.sub-text-group h3 {
+.title-subscribe {
     font-size: 36px;
     font-weight: 700;
     line-height: 45px;
 }
 
-.sub-text-group p {
+.desc-subscribe {
     font-size: 14px;
     font-weight: 400;
     line-height: 18px;
 }
 
-.enter-email-box {
-    position: absolute;
+.box-enter-email {
+    margin: 69px 0 71px 0;
     width: 530px;
     height: 60px;
-    top: 70px;
-    left: 692px;
     border-radius: 60px;
-    background-color: #FFFFFF;
+    background-color: #FFF;
     display: flex;
+    flex-direction: row;
     align-items: center;
 }
 
-.enter-email-box form {
-    display: flex;
-    align-items: center;
-}
-
-.email {
-    position: absolute;
-    /*top: 18px;*/
-    left: 28px;
+.img-email {
     width: 24px;
     height: 24px;
+    margin-left: 18px;
 }
 
-.enter-email-box input {
-    position: absolute;
-    /*top: 20px;*/
-    left: 68px;
+.input-email {
     width: 200px;
+    margin-left: 16px;
     border: 0;
 }
 
-.enter-email-box input::placeholder {
+.input-email::placeholder {
     font-family: Pretendard;
     font-size: 16px;
     font-weight: 400;
@@ -382,10 +345,8 @@
     color: #767676;
 }
 
-.enter-email-box .btn-subscribe {
-    position: absolute;
-    /*top: 5px;*/
-    left: 389px;
+.btn-subscribe {
+    margin-left: 137px;
     width: 135px;
     height: 50px;
     color: #FFF;
@@ -398,50 +359,31 @@
     text-align: center;
 }
 
-footer {
-    width: 1920px;
+#footer {
+    margin-top: 240px;
     height: 160px;
-    position: absolute;
-    top: 4159px;
     display: flex;
+    flex-direction: row;
     align-items: center;
     background-color: #FFF;
 }
 
-footer .logo-footer {
+#footer .img-logo {
     width: 226px;
     height: 70px;
-    position: absolute;
-    left: 320px;
+    margin-left: 320px;
 }
 
-footer .footer-icongroup {
-    position: absolute;
-    left: 1372px;
+.box-icon-footer {
     display: flex;
+    flex-direction: row;
     gap: 20px;
+    margin-left: 826px;
 }
 
-.footer-icongroup button {
+.img-icons {
     width: 42px;
     height: 42px;
-    background-size: cover;
-}
-
-.footer-icongroup .icon-blog {
-    background-image: url('../images/icon-blog.png');
-}
-
-.footer-icongroup .icon-insta {
-    background-image: url('../images/icon-insta.png');
-}
-
-.footer-icongroup .icon-facebook {
-    background-image: url('../images/icon-facebook.png');
-}
-
-.footer-icongroup .icon-youtube {
-    background-image: url('../images/icon-youtube.png');
 }
 
 .btn-scrollup {
@@ -458,10 +400,7 @@ footer .footer-icongroup {
     background-image: url('../images/scroll-top-btn2.png');
 }
 
-.modalpage {
-    /*position: absolute;*/
-    /*top: 3627px;*/
-    /*left: -700px;*/
+.container-modal {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -475,15 +414,14 @@ footer .footer-icongroup {
     align-items: center;
 }
 
-.modalpage img {
+.img-modal-cat {
     width: 110px;
     height: 112px;
-    position: absolute;
-    top: 60px;
-    left: 245px;
+    margin-top: 60px;
 }
 
-.modalpage h1 {
+.title-modal {
+    margin-top: 24px;
     font-family: Pretendard;
     font-size: 36px;
     font-weight: 700;
@@ -491,31 +429,24 @@ footer .footer-icongroup {
     text-align: center;
     width: 212px;
     height: 46px;
-    position: absolute;
-    top: 196px;
-    left: 194px;
     color: #D97652;
 }
 
-.modalpage p {
+.desc-modal {
+    margin-top: 12px;
     font-family: Pretendard;
     font-size: 14px;
     font-weight: 400;
     line-height: 18px;
     text-align: center;
-    position: absolute;
-    top: 254px;
-    left: 108px;
 }
 
-.modalpage button {
+.btn-modal {
+    margin-top: 38px;
     width: 183px;
     height: 50px;
     background-color: #D97652;
     border-radius: 40px;
-    position: absolute;
-    top: 310px;
-    left: 205px;
     font-family: Pretendard;
     font-size: 16px;
     font-weight: 700;

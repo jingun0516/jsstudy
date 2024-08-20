@@ -2,17 +2,17 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>Figma</title>
+    <title>Hodu</title>
     <link rel="stylesheet" href="../reset.css"/>
+    <link rel="stylesheet" href="./style/main.css">
     <script async
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBcDC2THpQnoZlUuGeiTnntgUhQL5p2nwk&callback=initMap"></script>
-    <link rel="stylesheet" href="./style/main.css">
 </head>
 <body>
 <div class="container">
     <header id="header">
         <div class="box-navbar-top">
-            <img src="images/logohodu.png" alt="호두 로고" class="img-logo-top">
+            <img src="images/logohodu.png" alt="호두 로고" class="img-logo">
             <nav class="elem-navbar-top">
                 <ul>
                     <li><a href="">Home</a></li>
@@ -24,23 +24,23 @@
         </div>
         <h1 style="display: none">hodu</h1>
     </header>
-    <div class="container-first">
-        <section class="section-first">
-            <h2 class="title-first">
-                Lorem Ipsum is simply<br>
-                dummy text of the printing and
-            </h2>
-            <p class="desc-first">
-                Lorem Ipsum is simply dummy text of the printing and<br>
-                typesetting industry.<br>
-                Lorem Ipsum has been the industry's standard dummy text<br>
-                ever since the 1500s, when an unknown
-            </p>
-            <button class="btn-first-down">Download</button>
-        </section>
-        <img src="images/h1cat.png" alt="첫번째 페이지 냥이" class="img-cat-first">
-    </div>
     <main>
+        <div class="container-first">
+            <section class="section-first">
+                <h2 class="title-first">
+                    Lorem Ipsum is simply<br>
+                    dummy text of the printing and
+                </h2>
+                <p class="desc-first">
+                    Lorem Ipsum is simply dummy text of the printing and<br>
+                    typesetting industry.<br>
+                    Lorem Ipsum has been the industry's standard dummy text<br>
+                    ever since the 1500s, when an unknown
+                </p>
+                <button class="btn-first-down">Download</button>
+            </section>
+            <img src="images/h1cat.png" alt="첫번째 페이지 냥이" class="img-cat-first">
+        </div>
         <section class="section-second">
             <img src="./images/maincatimg.png" alt="두번째 냥이" class="img-cat-second">
             <div class="box-second">
@@ -60,7 +60,8 @@
                 dummy text of the printing and dummy
             </h3>
             <p class="desc-third">
-                Lorem Ipsum is simply <span class="style-color">dummy text</span> of the printing and typesetting industry.<br>
+                Lorem Ipsum is simply <span class="span-desc-third">dummy text</span> of the printing and typesetting
+                industry.<br>
                 Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
             </p>
             <div class="box-cats1">
@@ -78,16 +79,12 @@
             <p class="desc-showmore">Continue exploring HODU</p>
             <button class="btn-showmore">Show more</button>
         </div>
-        <img src="./images/rect.png" alt="선 긋기" class="rectimg">
+        <img src="./images/rect.png" alt="선 긋기" class="img-line">
         <section class="section-map">
             <h3 class="title-map">Where you'll be</h3>
             <p class="desc-map">330, Cheomdan-ro, Jeju-si, Jeju-do, Republic of Korea</p>
             <div id="map"></div>
-            <!--        <img src="./images/googlemapex.png" alt="지도" class="mapex">-->
         </section>
-        <img src="./images/cat_footer.png" alt="footer냥이" class="img-cat-footer">
-        <div class="background-footer"></div>
-        <button class="btn-scrollup"></button>
         <section class="section-subscribe">
             <div class="box-text-subscribe">
                 <h3 class="title-subscribe">Subscribe to our Blog post</h3>
@@ -96,30 +93,33 @@
             </div>
             <div class="box-enter-email">
                 <img src="./images/mail.svg" alt="이메일아이콘" class="img-email">
-                <form action="" id="submit-email">
+                <form action="" id="form-email">
                     <input type="email" class="input-email" name="value-email" placeholder="Enter your e-mail address">
                 </form>
                 <button class="btn-subscribe">Subscribe</button>
             </div>
         </section>
+        <div class="box-footer-cat"></div>
+        <button class="btn-scrollup"></button>
     </main>
     <footer id="footer">
         <img src="./images/logohodu.png" alt="호두 로고" class="img-logo">
         <div class="box-icon-footer">
-            <button class="icon-blog"></button>
-            <button class="icon-insta"></button>
-            <button class="icon-facebook"></button>
-            <button class="icon-youtube"></button>
+            <button class="btn-blog"><img src="./images/icon-blog.png" alt="블로그" class="img-icons"></button>
+            <button class="btn-insta"><img src="./images/icon-insta.png" alt="인스타" class="img-icons"></button>
+            <button class="btn-facebook"><img src="./images/icon-facebook.png" alt="페북" class="img-icons"></button>
+            <button class="btn-youtube"><img src="./images/icon-youtube.png" alt="유투브" class="img-icons"></button>
         </div>
     </footer>
-
-    <div class="box-modal">
-        <img src="./images/modal-cat.png" alt="modal 냥이" class="img-cat-modal">
-        <h2 class="title-modal">Thank You!</h2>
-        <p class="desc-modal">Lorem Ipsum is simply dummy text of the printing industry.</p>
-        <button type="submit" class="btn-modal">OK! I Love HODU</button>
-    </div>
 </div>
+
+<div class="container-modal">
+    <img src="./images/modal-cat.png" alt="modal 냥이" class="img-modal-cat">
+    <h2 class="title-modal">Thank You!</h2>
+    <p class="desc-modal">Lorem Ipsum is simply dummy text of the printing industry.</p>
+    <button type="submit" class="btn-modal">OK! I Love HODU</button>
+</div>
+
 <script src="./js/main.js"></script>
 </body>
 </html>
