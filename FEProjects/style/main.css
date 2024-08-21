@@ -6,6 +6,13 @@
     font-style: normal;
 }
 
+body{
+    font-family: Pretendard;
+}
+button{
+    font-family: Pretendard;
+    text-align: center;
+}
 .container {
     width: 1920px;
     position: relative;
@@ -27,34 +34,31 @@
 .box-navbar-top .img-logo {
     width: 130px;
     height: 40px;
-    margin: 0 756px 0 320px;
+    margin-left: 320px;
 }
 
 .elem-navbar-top {
-    width: 205px;
-    height: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 49px 0;
+    margin-left: 756px;
 }
 
 .elem-navbar-top ul {
     display: flex;
     flex-direction: row;
     gap: 30px;
-    font-family: Pretendard;
     font-size: 16px;
     font-weight: 400;
     line-height: 20px;
 }
 
 .btn-header-down {
+    margin-left: 49px;
     font-size: 16px;
     font-weight: 700;
     line-height: 20px;
     text-align: center;
-    font-family: Pretendard;
     color: #FFF;
     width: 140px;
     height: 50px;
@@ -62,20 +66,20 @@
     background-color: #D97652;
 }
 
-main{
+.container-margin{
     margin-left: 320px;
 }
 
-.container-first{
+.section-first{
     width: 1920px;
     height: 798px;
-    transform: translateX(-320px);
     background-color: #F2E9D8;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     align-items: flex-start;
 }
-.section-first {
+.container-first-text {
     display: flex;
     flex-direction: column;
     gap: 40px;
@@ -83,17 +87,14 @@ main{
     margin-left: 320px;
 }
 .title-first {
-    font-family: Pretendard;
     font-size: 48px;
     font-weight: 700;
     line-height: 60px;
     text-align: left;
     margin-top: 200px;
-    margin-right: 170px;
 }
 
 .desc-first {
-    font-family: Pretendard;
     font-size: 16px;
     font-weight: 400;
     line-height: 20px;
@@ -101,11 +102,9 @@ main{
 }
 
 .btn-first-down {
-    font-family: Pretendard;
     font-size: 16px;
     font-weight: 700;
     line-height: 20px;
-    text-align: center;
     color: #FFF;
     width: 140px;
     height: 50px;
@@ -117,6 +116,7 @@ main{
     width: 415px;
     height: 766px;
     margin-top: 32px;
+    margin-right: 320px;
 }
 
 .section-second{
@@ -139,7 +139,6 @@ main{
 }
 
 .title-second {
-    font-family: Pretendard;
     font-size: 36px;
     font-weight: 700;
     line-height: 45px;
@@ -148,7 +147,6 @@ main{
 }
 
 .desc-second {
-    font-family: Pretendard;
     font-size: 16px;
     font-weight: 400;
     line-height: 20px;
@@ -166,7 +164,6 @@ main{
 }
 
 .title-third {
-    font-family: Pretendard;
     font-size: 48px;
     font-weight: 700;
     line-height: 60px;
@@ -174,7 +171,6 @@ main{
 }
 
 .desc-third {
-    font-family: Pretendard;
     font-size: 16px;
     font-weight: 400;
     line-height: 20px;
@@ -214,7 +210,6 @@ main{
     flex-direction: column;
     gap: 28px;
     margin-top: 100px;
-    font-family: Pretendard;
     align-items: center;
 }
 
@@ -244,7 +239,6 @@ main{
 .section-map {
     display: flex;
     flex-direction: column;
-    font-family: Pretendard;
     text-align: left;
 }
 
@@ -289,7 +283,6 @@ main{
     display: flex;
     flex-direction: row;
     gap: 168px;
-    font-family: Pretendard;
     text-align: left;
     color: #FFF;
 }
@@ -331,13 +324,13 @@ main{
 }
 
 .input-email {
-    width: 200px;
+    width: 184px;
+    height: 20px;
     margin-left: 16px;
     border: 0;
 }
 
 .input-email::placeholder {
-    font-family: Pretendard;
     font-size: 16px;
     font-weight: 400;
     line-height: 20px;
@@ -352,11 +345,9 @@ main{
     color: #FFF;
     background-color: #D97652;
     border-radius: 40px;
-    font-family: Pretendard;
     font-size: 16px;
     font-weight: 700;
     line-height: 20px;
-    text-align: center;
 }
 
 #footer {
@@ -422,7 +413,6 @@ main{
 
 .title-modal {
     margin-top: 24px;
-    font-family: Pretendard;
     font-size: 36px;
     font-weight: 700;
     line-height: 45px;
@@ -434,7 +424,6 @@ main{
 
 .desc-modal {
     margin-top: 12px;
-    font-family: Pretendard;
     font-size: 14px;
     font-weight: 400;
     line-height: 18px;
@@ -447,7 +436,6 @@ main{
     height: 50px;
     background-color: #D97652;
     border-radius: 40px;
-    font-family: Pretendard;
     font-size: 16px;
     font-weight: 700;
     line-height: 20px;

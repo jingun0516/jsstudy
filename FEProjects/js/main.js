@@ -25,7 +25,7 @@ btn_scrollup.addEventListener('click', function () {
 const input_email = document.querySelector('.input-email');
 const button_email = document.querySelector('.btn-subscribe');
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-const modalpage = document.querySelector('.modal-container');
+const modalpage = document.querySelector('.container-modal');
 const btn_modalclose = document.querySelector('.btn-modal');
 const form_submit = document.querySelector('#form-email');
 
