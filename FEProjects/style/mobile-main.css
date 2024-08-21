@@ -318,6 +318,7 @@
     background-color: #FFF;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
 }
 
 .box-logo-icon{
@@ -332,12 +333,6 @@
     height: 34px;
 }
 
-footer .iconbox {
-    margin-top: 58px;
-    display: flex;
-    flex-direction: row;
-    gap: 16px;
-}
 
 .img-icons {
     width: 32px;
@@ -346,7 +341,7 @@ footer .iconbox {
 
 .box-menu-footer {
     margin-top: 30px;
-    margin-left: 89px;
+    margin-right: 21px;
     width: 84px;
     height: 120px;
     display: flex;

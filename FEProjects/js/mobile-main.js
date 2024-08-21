@@ -64,3 +64,51 @@ btn_menu.addEventListener('click', function () {
 menu_close.addEventListener('click', function () {
     menu_content.style.display = 'none';
 })
+
+
+const btnBlog = document.querySelector('.btn-blog');
+const btnInsta = document.querySelector('.btn-insta');
+const btnFacebook = document.querySelector('.btn-facebook');
+const btnYoutube = document.querySelector('.btn-youtube');
+
+btnBlog.addEventListener('mousedown', event => {
+    if(event.button === 1) {
+        window.open("https://blog.naver.com", "_blank"); // 새 탭에서 열기
+    }
+    else if(event.button === 0){
+        window.location.href = "https://blog.naver.com";
+    }
+})
+btnInsta.addEventListener('mousedown', (event) => {
+    switch(event.button)
+    {
+        case 0:
+            window.location.href = "https://instagram.com";
+            break;
+        case 1:
+            window.open("https://instagram.com");
+            break;
+    }
+})
+btnFacebook.addEventListener('mousedown', (event) => {
+    switch(event.button)
+    {
+        case 0:
+            window.location.href = "https://facebook.com";
+            break;
+        case 1:
+            window.open("https://facebook.com");
+            break;
+    }
+})
+btnYoutube.addEventListener('mousedown', (event) => {
+    switch(event.button)
+    {
+        case 0:
+            window.location.href = "https://youtube.com";
+            break;
+        case 1:
+            window.open("https://youtube.com");
+            break;
+    }
+})

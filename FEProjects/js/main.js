@@ -56,6 +56,53 @@ btn_modalclose.addEventListener('click', function (event) {
     modalpage.style.display = 'none';
 });
 
+const btnBlog = document.querySelector('.btn-blog');
+const btnInsta = document.querySelector('.btn-insta');
+const btnFacebook = document.querySelector('.btn-facebook');
+const btnYoutube = document.querySelector('.btn-youtube');
+
+btnBlog.addEventListener('mousedown', event => {
+    if(event.button === 1) {        // 마우스 휠
+        window.open("https://blog.naver.com", "_blank"); // 새 탭에서 열기
+    }
+    else if(event.button === 0){
+        window.location.href = "https://blog.naver.com";
+    }
+})
+btnInsta.addEventListener('mousedown', (event) => {
+    switch(event.button)
+    {
+        case 0:
+            window.location.href = "https://instagram.com";
+            window.open("https://instagram.com");
+            break;
+        case 1:
+            window.open("https://instagram.com");
+            break;
+    }
+})
+btnFacebook.addEventListener('mousedown', (event) => {
+    switch(event.button)
+    {
+        case 0:
+            window.location.href = "https://facebook.com";
+            break;
+        case 1:
+            window.open("https://facebook.com");
+            break;
+    }
+})
+btnYoutube.addEventListener('mousedown', (event) => {
+    switch(event.button)
+    {
+        case 0:
+            window.location.href = "https://youtube.com";
+            break;
+        case 1:
+            window.open("https://youtube.com");
+            break;
+    }
+})
 
 // 비동기식 접근을 통해 제출 후 새로고침X
 //     btn_modalclose.addEventListener('click', function() {
